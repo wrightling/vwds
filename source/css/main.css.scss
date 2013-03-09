@@ -89,20 +89,32 @@ textarea {
 
 header {
     border: 1px solid;
-    border-radius:5px;
     margin: 10px;
     padding: 10px;
-    min-width: 900px;
+    color: #ffffff;
+    background-color: #8cb252;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
 }
 
 #showcase {
     @include clearfix;
     text-align: justify;
-    margin: 20px;
+    margin: 80px;
 
     img {
         display: inline-block;
         width: 300px;
+        -moz-transition: opacity .2s ease-in-out;
+        -webkit-transition: opacity .2s ease-in-out;
+        -o-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: .65;
+    }
+
+    img:hover {
+        opacity: 1;
     }
 
 }
