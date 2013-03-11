@@ -103,5 +103,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass
   middleman (~> 3.0.12)
   thin

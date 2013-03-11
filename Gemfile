@@ -4,3 +4,4 @@ source 'http://rubygems.org'
 
 gem "thin"
 gem "middleman", "~>3.0.12"
+gem "compass"

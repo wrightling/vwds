@@ -1,4 +1,6 @@
+@import "compass";
 @import "base";
+@import "fonts";
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -86,16 +88,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-@font-face {
-    font-family: 'DISCORegular';
-    src: url('DISCO/DISCO___-webfont.eot');
-    src: url('DISCO/DISCO___-webfont.eot?#iefix') format('embedded-opentype'),
-         url('DISCO/DISCO___-webfont.woff') format('woff'),
-         url('DISCO/DISCO___-webfont.ttf') format('truetype'),
-         url('DISCO/DISCO___-webfont.svg#DISCORegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 header {
     height: 100px;
@@ -103,9 +95,7 @@ header {
     padding: 10px;
     color: #ffffff;
     background-color: #8cb252;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
-    border-radius:5px;
+    @include border-radius(5px);
 
     h1, h2 {
         font-family: DISCORegular, sans-serif;
@@ -131,17 +121,13 @@ header {
     img {
         display: inline-block;
         width: 300px;
-        -moz-transition: opacity .2s ease-in-out;
-        -webkit-transition: opacity .2s ease-in-out;
-        -o-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
+        @include single-transition(opacity, .2s, ease-in-out);
         opacity: .65;
-    }
 
-    img:hover {
-        opacity: 1;
+        &:hover {
+            opacity: 1;
+        }
     }
-
 }
 
 #showcase:after {
