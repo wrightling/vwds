@@ -114,7 +114,7 @@ header {
 }
 
 #showcase {
-    @include clearfix;
+    @include pie-clearfix;
     text-align: justify;
     margin: 80px;
 
